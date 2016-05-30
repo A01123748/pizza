@@ -30,7 +30,18 @@ class ResumeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func confirm(sender: AnyObject) {
+        let alert = UIAlertController(title: "Orden confirmada", message: "Tu pizza será enviada tan pronto sea posible", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: {
+            (action: UIAlertAction!) in
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        }))
+        self.presentViewController(alert, animated: true, completion:nil)
+    }
 
+    @IBAction func cancel(sender: AnyObject) {
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
     /*
     // MARK: - Navigation
 

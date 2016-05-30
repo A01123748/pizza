@@ -25,7 +25,7 @@
         <!--Size View Controller-->
         <scene sceneID="IaP-vc-mDW">
             <objects>
-                <viewController id="Zlq-jH-eZ0" customClass="SizeViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="First" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zlq-jH-eZ0" customClass="SizeViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5mN-EL-wyC"/>
                         <viewControllerLayoutGuide type="bottom" id="AmK-s8-eUW"/>
@@ -488,6 +488,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKs-d3-HGQ">
                                 <rect key="frame" x="460" y="550" width="120" height="30"/>
                                 <state key="normal" title="Confirmar pedido"/>
+                                <connections>
+                                    <action selector="confirm:" destination="QaF-rO-zOY" eventType="touchUpInside" id="h9Z-ga-7tu"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UhQ-2U-HLM">
                                 <rect key="frame" x="36" y="449" width="536" height="30"/>
@@ -512,6 +515,13 @@
                                 <color key="textColor" red="0.13186843014800256" green="0.32855979963070375" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9h-GX-ayI">
+                                <rect key="frame" x="20" y="550" width="61" height="30"/>
+                                <state key="normal" title="Cancelar"/>
+                                <connections>
+                                    <action selector="cancel:" destination="QaF-rO-zOY" eventType="touchUpInside" id="r6R-Jn-Qe6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -523,6 +533,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="AKs-d3-HGQ" secondAttribute="trailing" id="FVv-Fx-amw"/>
                             <constraint firstItem="IR6-Zf-4oU" firstAttribute="centerX" secondItem="O67-5f-ktR" secondAttribute="centerX" id="GD7-UP-B47"/>
                             <constraint firstItem="wzk-Da-s4e" firstAttribute="centerX" secondItem="Up3-gK-N17" secondAttribute="centerX" id="Jda-p7-g7A"/>
+                            <constraint firstItem="u9h-GX-ayI" firstAttribute="leading" secondItem="Khh-8i-ZZD" secondAttribute="leadingMargin" id="OxY-At-cuR"/>
                             <constraint firstItem="zGb-Kq-qAR" firstAttribute="leading" secondItem="wzk-Da-s4e" secondAttribute="leading" id="Oyd-WE-MCf"/>
                             <constraint firstItem="IR6-Zf-4oU" firstAttribute="centerX" secondItem="Khh-8i-ZZD" secondAttribute="centerX" id="QDI-84-tWQ"/>
                             <constraint firstItem="IR6-Zf-4oU" firstAttribute="top" secondItem="siE-Al-mKg" secondAttribute="bottom" constant="16" id="RgQ-AN-R1E"/>
@@ -534,6 +545,7 @@
                             <constraint firstItem="UhQ-2U-HLM" firstAttribute="leading" secondItem="Khh-8i-ZZD" secondAttribute="leadingMargin" constant="16" id="dYT-Py-bOa"/>
                             <constraint firstItem="cNS-uk-8pK" firstAttribute="top" secondItem="Kb2-27-5wO" secondAttribute="bottom" constant="24" id="mjb-iq-tac"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UhQ-2U-HLM" secondAttribute="trailing" constant="8" id="ohC-jQ-t6N"/>
+                            <constraint firstItem="u9h-GX-ayI" firstAttribute="baseline" secondItem="AKs-d3-HGQ" secondAttribute="baseline" id="qlS-BW-VyJ"/>
                             <constraint firstItem="cNS-uk-8pK" firstAttribute="centerX" secondItem="zGb-Kq-qAR" secondAttribute="centerX" id="scY-NZ-AeZ"/>
                             <constraint firstItem="tyC-lq-Q95" firstAttribute="centerX" secondItem="Kb2-27-5wO" secondAttribute="centerX" id="vij-8W-Nup"/>
                         </constraints>
